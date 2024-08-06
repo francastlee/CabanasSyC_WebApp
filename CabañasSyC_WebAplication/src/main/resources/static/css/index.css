@@ -1,9 +1,77 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 21 jul 2024, 18:57:41
-    Author     : fandr
-*/
+.font-merriweather {
+    font-family: "Merriweather", serif;
+    font-style: normal;
+}
 
+.page-selected, .navLink {
+    display: inline-block;
+    border-radius: 7%;
+    padding: 5px 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    animation: alternate;
+}
+
+.page-selected {
+    background-color: rgba(127, 72, 63, 0.8);
+    text-shadow: 0px 0px 12px #fff;
+    border-radius: 7%;
+    box-shadow: 0px 0px 12px #fff;
+}
+
+.text-shadow-white {
+    text-shadow: 0 0 12px #fff;
+}
+
+.navLink:hover {
+    background-color: rgba(127, 72, 63, 0.8);
+    border-radius: 7%;
+    box-shadow: 0px 0px 12px #fff;
+    text-shadow: 0px 0px 12px #fff;
+    cursor: pointer;
+    animation: backwards 0.9s ease-in;
+}
+
+.borderW {
+    color: #8C512F;
+    text-shadow:
+        -1px -1px 0 White,
+        1px -1px 0 White,
+        1px 1px 0 White,
+        -1px 1px 0 White
+}
+
+.wave{
+    color: #1c751c;
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave{
+    0%, 100%{
+        clip-path: polygon(
+            0% 47%,
+            10% 48%,
+            33% 54%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
