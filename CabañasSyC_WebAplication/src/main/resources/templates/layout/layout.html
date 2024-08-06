@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xlmns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:fragment="head">
+        <title>Cabañas SyC</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{/css/index.css}" type="text/css">
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://kit.fontawesome.com/2f319a589c.js" crossorigin="anonymous"></script>
+        <script th:src="@{/js/activeLink.js}"></script>
+        <script th:src="@{/js/menuResponsive.js}"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header th:fragment="header" class="absolute z-10 w-full ">
+            <nav class="flex justify-between items-center w-[92%] mx-auto h-20 bg-transparent font-merriweather animate__animated animate__fadeInLefdt animate__slow">
+                <div class="max-w-24">
+                    <a th:href="@{/}"><img th:src="@{/imgs/index/logoSyC.png}" class="max-w-20px"></a>
+                </div>
+                <div class="linksSelector duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-600%] md:w-auto w-full flex items-center px-5">
+                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[5vw] gap-6 text-[12px] md:text-[20px]">
+                        <li><a class="navLink">[[#{nav.contact}]]</a></li>
+                        <li><a class="navLink">[[#{nav.tours}]]</a></li>
+                        <li><a th:href="@{/}" class="navLink">[[#{nav.home}]]</a></li>
+                        <li><a class="navLink" th:href="@{/cabins/cabinsList}">[[#{nav.cabins}]]</a></li>
+                        <li><a class="text-shadow-white navLink">[[#{nav.book}]]</a></li>
+                    </ul>
+                </div>
+                <div class="z-0 flex items-center gap-6">
+                    <a><i class="fa-solid fa-user fa-lg"></i></a>
+                    <i onclick="onToggleMenu(event)" class="fa-solid fa-bars md:hidden menuSelector" name="menu"></i>
+                </div>
+            </nav>
+        </header>
+        <section th:fragment="background" class="relative h-screen w-full ">
+            <img th:src="@{/imgs/index/home background.jpg}" class="absolute w-full h-full z-0"/>
+        </section>
+        <section th:fragment="welcomePhrase" class="absolute w-[600px] z-10 top-[250px] left-[50px] font-merriweather text-center animate__animated animate__fadeInUp animate__slow">
+            <div class="relative h-[30px] flex justify-center items-center">
+                <h2 class="text-[75px] absolute borderW text-shadow-white z-0">Hotel</h2>
+                <h2 class="text-[75px] absolute wave z-10">Hotel</h2>
+            </div>
+            <div class="relative h-[110px] flex justify-center items-center">
+                <h2 class="text-[75px] absolute borderW text-shadow-white z-0">Cabañas SyC</h2>
+                <h2 class="text-[75px] absolute wave z-10">Cabañas SyC</h2>
+            </div>
+            <div class="flex bg-[#7F483F] p-3 bg-opacity-[0.80] rounded-[23px] justify-center items-center w-[400px] mx-auto">
+                <span class="opacity-100 text-center text-shadow-white">
+                    Vive el paraíso en la Fortuna de San Carlos acompañado de tu familia en nuestras 
+                    cabañas, no te pierdas de nuestra hermosa piscina y la impresionante vista al volcán Arenal.
+                </span>
+            </div>
+        </section>
     </body>
 </html>
