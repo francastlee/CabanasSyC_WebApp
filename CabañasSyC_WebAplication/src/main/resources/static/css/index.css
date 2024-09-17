@@ -1,5 +1,14 @@
+body {
+    overflow-x: hidden;
+}
+
 .font-merriweather {
     font-family: "Merriweather", serif;
+    font-style: normal;
+}
+
+.font-karla{
+    font-family: "Karla", sans-serif;
     font-style: normal;
 }
 
@@ -74,4 +83,191 @@
             0% 100%
         );
     }
+}
+
+.shadow-photos-home{
+    box-shadow: 0px 0px 15px #006817;
+}
+
+.bg-gradient-home{
+    background: linear-gradient(to top,#4B2A1F, transparent);
+}
+
+.bg-gradient-home2{
+    background: linear-gradient(to top, #856D5D, transparent);
+}
+
+.fade-in-bottom{
+    animation:fade-in-bottom 1s forwards;
+    opacity: 0;
+}
+
+.fade-in-bottom1{
+    animation:fade-in-bottom 1s 1s forwards;
+    opacity: 0;
+}
+
+.fade-in-bottom2{
+    animation:fade-in-bottom 1s 1.6s forwards;
+    opacity: 0;
+}
+
+.fade-in-bottom3{
+    animation:fade-in-bottom 1s 2.2s forwards;
+    opacity: 0;
+}
+
+
+
+@keyframes fade-in-bottom{
+    0%{
+        transform:translateY(100px);
+        opacity:0
+    }100%{
+        transform:translateY(0);
+        opacity:1
+    }
+}
+
+.text-shadow-green{
+    text-shadow: 0px 0px 12px #006817;
+}
+
+.carousel-item {
+    display: none;
+}
+.carousel-item.active {
+    display: block;
+}
+
+
+.cardAnimation{
+    opacity: 0;
+}
+
+.slide-in-left {
+	animation: slide-in-left 1.5s both
+}
+
+ @keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.slide-in-right {
+	animation: slide-in-right 1.5s both
+}
+
+ @keyframes slide-in-right {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.fade-in-top {
+	animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.heartbeat {
+    animation: heartbeat 3s ease-in-out infinite both;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+  
+.card-shadow{
+    box-shadow: 0px 0px 20px black;
+}
+
+.cardKnowUsAnimation {
+    opacity: 0;
+}
+
+.fade-in-top-card1 {
+    animation: slide-in-top 1s forwards;
+}
+
+.fade-in-top-card2 {
+    animation: slide-in-bottom 1s forwards;
+    animation-delay: 0.7s;
+}
+
+.fade-in-top-card3 {
+    animation: slide-in-top 1s forwards;
+    animation-delay: 1.4s;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.no-scroll {
+    overflow: hidden;
 }
