@@ -5,14 +5,18 @@
 </head>
 <body>
     <section th:fragment="cabinList">
-        <div th:each="cabin : ${cabins}">
-            <div class="card">
-                <span>Name: [[${cabin.name}]]</span>
-                <span>Cabin Type: [[${cabin.cabinType.name}]]</span>
-                <span># Beds: [[${cabin.cabinType.numberOfBeds}]]</span>
-                <span>Capacity: [[${cabin.cabinType.capacity}]]</span>
-                <span>Price: [[${cabin.cabinType.price}]]</span>
-            </div>
+        <div class="content w-full h-screen bg-[#4B2A1F]">
+            <section class="carousel-container flex justify-between items-center h-screen">
+                <div class="card ">
+                    <img th:src="@{/imgs/index/home image 3.jpg}" class="h-[200px] w-200px">
+                </div>
+                <div class="card">
+                    <img th:src="@{/imgs/index/home image 3.jpg}" class="h-[200px] w-200px">
+                </div>
+                <div class="card">
+                    <img th:src="@{/imgs/index/home image 3.jpg}" class="h-[200px] w-200px">
+                </div>
+            </section>
         </div>
     </section>
 </body>
