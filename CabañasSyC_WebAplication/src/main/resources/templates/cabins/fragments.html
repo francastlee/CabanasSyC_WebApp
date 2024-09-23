@@ -1,0 +1,19 @@
+<!DOCTYPE html >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Cabañas SyC</title> 
+</head>
+<body>
+    <section th:fragment="cabinList">
+        <div th:each="cabin : ${cabins}">
+            <div class="card">
+                <span>Name: [[${cabin.name}]]</span>
+                <span>Cabin Type: [[${cabin.cabinType.name}]]</span>
+                <span># Beds: [[${cabin.cabinType.numberOfBeds}]]</span>
+                <span>Capacity: [[${cabin.cabinType.capacity}]]</span>
+                <span>Price: [[${cabin.cabinType.price}]]</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
