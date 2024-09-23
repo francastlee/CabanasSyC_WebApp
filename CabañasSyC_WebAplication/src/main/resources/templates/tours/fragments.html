@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Cabañas SyC</title> 
+</head>
+<body>
+    
+    <section th:fragment="toursList" class="w-full h-screen bg-[#4B2A1F]">
+        <h2 class="text-center pt-[100px] text-[50px] text-white text-shadow-green">Actividades en la zona</h2>
+        <div class="wrapper flex justify-center mt-[100px]">
+            <div class="card">
+                <img th:src="@{/imgs/index/home image 5.jpg}">
+                <div class="info">
+                    <h3>Catarata Rio Fortuna</h3>
+                    <p>La Fortuna, Alajuela</p>
+                    <button class="bg-[#4B2A1F] hover:bg-[#006817] text-white font-bold py-2 px-4 border-b-4 border-[#006817] rounded">Book</button>
+                </div>
+            </div>
+            <div class="card">
+                <img th:src="@{/imgs/index/home image 5.jpg}">
+                <div class="info">
+                    <h3>Catarata Rio Fortuna</h3>
+                    <p>La Fortuna, Alajuela</p>
+                    <button>favorite</button>
+                </div>
+            </div>
+            <div class="card">
+                <img th:src="@{/imgs/index/home image 5.jpg}">
+                <div class="info">
+                    <h3>Catarata Rio Fortuna</h3>
+                    <p>La Fortuna, Alajuela</p>
+                    <button>favorite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

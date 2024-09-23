@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const activeLinks = document.querySelectorAll('.navLink');
     const windowPath = window.location.pathname;
-
     activeLinks.forEach((activeLink) => {
         const href = activeLink.getAttribute('href');
 
