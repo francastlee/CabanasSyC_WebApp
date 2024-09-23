@@ -1,8 +1,7 @@
 package CabanasSyC.domain;
-import java.io.Serializable;
-import java.util.List;
 
-import jakarta.persistence.CascadeType;
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,27 +9,22 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-
 import lombok.Data;
 
 @Data
 @Entity
-@Table(name="cabins")
+@Table(name="cabinImages")
 
-public class Cabin implements Serializable {
+public class CabinImage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="idCabin")
-    private Long idCabin;
+    @Column(name="idCabinImage")
+    private Long idCabinImage;
 
-    private String name;
+    private String URL;
 
     @ManyToOne
-    @JoinColumn(name = "cabinType")
-    private CabinType cabinType;
-    
-    @OneToMany(mappedBy = "cabin", cascade = CascadeType.ALL)
-    private List<CabinImage> images;
+    @JoinColumn(name = "idCabin")
+    private Cabin cabin;
 }

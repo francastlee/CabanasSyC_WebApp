@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package CabanasSyC.dao;
 
-/**
- *
- * @author fandr
- */
-public class CabinDao {
-    
+import CabanasSyC.domain.Cabin;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CabinDao extends JpaRepository<Cabin, Long> {
 }
