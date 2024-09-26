@@ -5,31 +5,17 @@
 </head>
 <body>
     
-    <section th:fragment="toursList" class="w-full h-screen bg-[#4B2A1F]">
-        <h2 class="text-center pt-[100px] text-[50px] text-white text-shadow-green">Actividades en la zona</h2>
-        <div class="wrapper flex justify-center mt-[100px]">
-            <div class="card">
-                <img th:src="@{/imgs/index/home image 5.jpg}">
+    <section th:fragment="toursList" class="w-full min-h-screen bg-[#4B2A1F]">
+        <h2 class="text-center pt-[80px] md:pt-[100px] md:text-[50px] text-[35px] text-white text-shadow-green">Actividades en la zona</h2>
+        <div class="grid place-items-center mt-10 md:grid-cols-5 grid-cols-2 gap-[60px] pb-5">
+            <div class="cardTour md:w-[250px] md:h-[290px] w-[180px] h-[220px]" th:each="tour : ${tours}">
+                <img th:src="${tour.image}">
                 <div class="info">
-                    <h3>Catarata Rio Fortuna</h3>
-                    <p>La Fortuna, Alajuela</p>
-                    <button class="bg-[#4B2A1F] hover:bg-[#006817] text-white font-bold py-2 px-4 border-b-4 border-[#006817] rounded">Book</button>
-                </div>
-            </div>
-            <div class="card">
-                <img th:src="@{/imgs/index/home image 5.jpg}">
-                <div class="info">
-                    <h3>Catarata Rio Fortuna</h3>
-                    <p>La Fortuna, Alajuela</p>
-                    <button>favorite</button>
-                </div>
-            </div>
-            <div class="card">
-                <img th:src="@{/imgs/index/home image 5.jpg}">
-                <div class="info">
-                    <h3>Catarata Rio Fortuna</h3>
-                    <p>La Fortuna, Alajuela</p>
-                    <button>favorite</button>
+                    <h3>[[${tour.name}]]</h3>
+                    <p>[[${tour.location}]]</p>
+                    <a th:href="'https://api.whatsapp.com/send?phone=+50685435358&text=Me%20interesa%20el%20tour:%20'+${tour.name}" target="_blank">
+                        <button class="bg-[#4B2A1F] hover:bg-[#006817] text-white font-bold py-2 px-4 border-b-4 border-[#006817] rounded">Book</button>
+                    </a>
                 </div>
             </div>
         </div>
